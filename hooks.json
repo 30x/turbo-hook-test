@@ -1,0 +1,25 @@
+[
+  {
+    "id": "turbo-webhook",
+    "execute-command": "/Users/bowenjosh/OSS/turbo-hook-test/temp.sh",
+    "command-working-directory": "/Users/bowenjosh/OSS/turbo-hook-test",
+    "trigger-rule": 
+    {
+      "and": 
+      [
+        {
+          "match":
+          {
+            "type": "value",
+            "value": "refs/heads/master",
+            "parameter": 
+            {
+              "source": "payload",
+              "name": "ref"
+            }
+          } 
+        }
+      ]
+    }
+  }
+]
